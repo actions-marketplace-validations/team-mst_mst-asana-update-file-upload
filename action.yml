@@ -1,0 +1,22 @@
+name: 'MST asana.com file uploader'
+description: 'This action uploads a file to an update of a pulse on asana.com.'
+author: 'Zeljko Romanovic MST'
+inputs:
+  asana-api-key:
+    description: asana.com API Key. This parameter should be stored in the GitHub secrets.
+    required: true
+  asana-update-id:
+    description: asana.com's update ID for which will be attached a file.
+    required: true
+  asana-file-path:
+    description: Path of a file which needs to be uploaded.
+    required: true
+outputs:
+  asana-response:
+    description: 'Response from asana.com in case the file is successfully uploaded.'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
+branding:
+  icon: 'file-plus'
+  color: 'green'
