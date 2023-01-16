@@ -34,7 +34,7 @@ async function run() {
           formData: {
                'file': fs.createReadStream(`${asanaFilePath}`),
                'name': `${asanaFilePath}`,
-               'parent': `${INPUT_ASANA_UDPATE_ID}`
+               'parent': `${asanaUpdateID}`
           }
         };
         // execute the request 
